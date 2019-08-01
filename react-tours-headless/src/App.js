@@ -13,9 +13,9 @@ import FilterBar from './FilterBar.js';
 
 const URL_BASE = window.MAGNOLIA_BASE_URL;
 //const URL_BASE = "http://localhost:8080/magnoliaAuthor/.rest";
-const URL_TOURS = '/.rest/delivery/demoTours/v1/';
-const URL_TOURTYPES = '/.rest/delivery/demoTourTypes/v1/';
-const URL_DESTINATIONS = '/.rest/delivery/demoDestinations/v1/';
+const URL_TOURS = '/.rest/delivery/tours/v1/';
+const URL_TOURTYPES = '/.rest/delivery/tourTypes/v1/';
+const URL_DESTINATIONS = '/.rest/delivery/destinations/v1/';
 
 const About = () => (
   <div>
