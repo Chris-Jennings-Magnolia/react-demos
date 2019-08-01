@@ -100,6 +100,8 @@ For example an error referring to the line below may be due to the 320x240 rendi
 
 `backgroundImage: 'url(' + window.MAGNOLIA_BASE_URL_IMAGE + this.props.tour.image.renditions['320x240'].link + ')'`
 
+The endpoint definition can be modified via the [Magnolia instance](http://localhost:8080/magnoliaAuthor/.magnolia/admincentral#app:resources:browser;/tours/restEndpoints/delivery/tours_v1.yaml:treeview:).
+
 # Notes
 The `react-tours-headless` and the 'Page demo' run the same React build.
 
