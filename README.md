@@ -83,7 +83,7 @@ Ensure Magnolia is running.
 
 * Type `npm install`
 
-* Type `npm run`
+* Type `npm start`
 
 * A browser will open a node-based dev server running an independent React App. It get content from the Magnolia Server content apps: Tours and Tour Categories.
 
@@ -94,6 +94,11 @@ Note: To avoid CORS errors (like 'Cross-Origin Request Blocked'), and allow the 
 
 Ensure that the base url to access the content on the Magnolia server is correct: In file `/react-tours-headless/public/index.html`, check that the `window.MAGNOLIA_BASE_URL` has the correct value for your server. (Probably it does, default is `magnoliaAuthor`. And that, with the proxy, should go to `http://localhost:8080/magnoliaAuthor`)
 
+The error `TypeError: Cannot read property 'link' of undefined` can be seen when the React app is requesting an image via a rendition that is not referenced in the REST response.
+
+For example an error referring to the line below may be due to the 320x240 rendition not being configured in the asset definition resolver of the endpoint. See [Resolving Asset References in Magnolia docs](https://documentation.magnolia-cms.com/display/DOCS/Resolving+references+with+the+delivery+endpoint#Resolvingreferenceswiththedeliveryendpoint-anc-resolving-asset-referencesResolvingassetreferences).
+
+`backgroundImage: 'url(' + window.MAGNOLIA_BASE_URL_IMAGE + this.props.tour.image.renditions['320x240'].link + ')'`
 
 # Notes
 The `react-tours-headless` and the 'Page demo' run the same React build.
